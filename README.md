@@ -7,7 +7,7 @@ Next steps:
 - [x] Installer Rollup
 - [x] Publier la lib (github repo via ssh)
 - [x] Automatiser la publication d'une nouvelle release (tag)
-- [ ] (MUST HAVE)Lib: Pouvoir importer plus facilement les assets cf. `import { Button } from "@sirdata/ui-lib/components"`
+- [ ] (MUST HAVE)Lib: Pouvoir importer plus facilement les assets cf. `import { Button } from "@pulsive/ui-lib/components"`
 
 ## Available Scripts
 
@@ -30,14 +30,14 @@ This command will build the library in a `/dist` folder using [Rollup](https://r
 
 ### `yarn build:local`
 
-This command will run `yarn build` and `npm pack` that will pack the project `sirdata-ui-lib-[version].tgz` to the root directory.
+This command will run `yarn build` and `npm pack` that will pack the project `pulsive-ui-lib-[version].tgz` to the root directory.
 You will be able to install the lib in your frontend projects with this following command:
 ```bash
 # with npm
-npm i path/to/lib/sirdata-ui-lib-[version].tgz
+npm i path/to/lib/pulsive-ui-lib-[version].tgz
 
 # with yarn
-yarn add path/to/lib/sirdata-ui-lib-[version].tgz
+yarn add path/to/lib/pulsive-ui-lib-[version].tgz
 ```
 
 ## Create a new release
