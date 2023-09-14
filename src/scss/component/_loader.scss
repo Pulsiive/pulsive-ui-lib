@@ -1,0 +1,36 @@
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-midnight-light);
+
+    span {
+        display: inline-block;
+        width: 4rem;
+        height: 4rem;
+        vertical-align: text-bottom;
+        border-width: 5px;
+        border-style: solid;
+        border-color: inherit;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner-loader 0.75s linear infinite;
+        animation: spinner-loader 0.75s linear infinite;
+    }
+
+    &.loader-small span {
+        width: 1.5rem;
+        height: 1.5rem;
+        border-width: 2px;
+    }
+
+    &.loader-full-page {
+        height: 20rem;
+    }
+}
+
+@keyframes spinner-loader {
+    to {
+        transform: rotate(360deg);
+    }
+}

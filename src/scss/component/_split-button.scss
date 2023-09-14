@@ -1,0 +1,93 @@
+.split-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+
+  .split-button-main {
+    border-radius: $border-radius-xl 0 0 $border-radius-xl;
+    border-right: 0;
+  }
+
+  .split-button-more {
+    padding-right: $spacing-xs;
+    padding-left: $spacing-xs;
+    margin: 0;
+    border-radius: 0 $border-radius-xl $border-radius-xl 0;
+
+    &.btn-primary-green,
+    &.btn-primary-midnight,
+    &.btn-primary-midnight-light {
+      border-left: 1px solid var(--color-white);
+    }
+
+    &.btn-default-midnight {
+      border-left: 1px solid var(--color-midnight);
+    }
+
+    i.material-icons {
+      line-height: 0.8;
+      margin: 0;
+    }
+  }
+
+  ul.split-button-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    z-index: 21;
+    height: auto;
+    background: var(--color-white);
+    border: 1px solid var(--color-grey);
+    box-shadow: 0 0 5px var(--color-grey);
+    border-radius: 0 0 $border-radius-lg $border-radius-lg;
+    overflow: hidden;
+
+    li {
+      display: block;
+      position: relative;
+      font-size: $font-size-14;
+      color: var(--color-midnight);
+      line-height: 1.5;
+      padding: $spacing-sm;
+      cursor: pointer;
+
+      &:hover {
+        background-color: var(--color-grey);
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      span {
+        display: block;
+      }
+    }
+  }
+
+  &.active {
+    .split-button-main {
+      border-radius: $border-radius-lg 0 0 0;
+    }
+
+    .split-button-more {
+      border-radius: 0 $border-radius-lg 0 0;
+    }
+
+    ul.split-button-menu {
+      display: block;
+    }
+  }
+}
+
+@media #{$screen-s} {
+  .split-button {
+    .split-button-more {
+      i.material-icons {
+        line-height: 0.6;
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+.drop-down-link {
+  &__content {
+    display: none;
+    margin-top: var(--spacing-xs);
+
+    &--visible {
+      display: block;
+    }
+  }
+}

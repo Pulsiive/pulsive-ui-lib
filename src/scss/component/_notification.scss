@@ -1,0 +1,21 @@
+.notification-icon {
+    position: relative;
+    display: inline-flex;
+    cursor: pointer;
+
+    &:hover {
+        & > i {
+            color: var(--color-green);
+        }
+    }
+}
+
+.notification-icon__chip {
+    position: absolute;
+    height: .75rem;
+    width: .75rem;
+    border-radius: .75rem;
+    top: 0;
+    right: 5%;
+    background-color: var(--color-red);
+}

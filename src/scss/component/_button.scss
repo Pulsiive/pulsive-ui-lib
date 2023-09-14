@@ -1,0 +1,269 @@
+button.btn,
+.btn-upload {
+  display: inline-flex;
+  align-items: center;
+  gap: .357rem;
+  justify-content: center;
+  letter-spacing: 0.4pt;
+  font-weight: $font-weight-semi-bold;
+  border-radius: $border-radius-xl;
+  cursor: pointer;
+  white-space: nowrap;
+  outline: 0;
+
+  &.reverse {
+    flex-direction: row-reverse;
+  }
+
+  & .btn__loader {
+    position: absolute;
+    color: var(--color-grey-dark);
+  }
+
+  &:disabled,
+  &.btn-upload--disabled {
+    background-color: var(--color-grey) !important;
+    border: 1px solid var(--color-grey) !important;
+    color: var(--color-white) !important;
+    cursor: initial;
+  }
+}
+
+.btn-upload {
+  position: relative;
+
+  input[type='file'] {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  &.btn-upload--disabled input[type='file'] {
+    cursor: initial;
+  }
+}
+
+button.btn-big,
+.btn-upload.btn-big {
+  padding: 0.7rem 1.4rem;
+  font-size: $font-size-16;
+  text-transform: uppercase;
+
+  i {
+    font-size: $font-size-20;
+  }
+}
+
+button.btn-medium,
+.btn-upload.btn-medium {
+  padding: 0.6rem 1.2rem;
+  font-size: $font-size-14;
+  text-transform: uppercase;
+
+  i {
+    font-size: $font-size-18;
+  }
+}
+
+button.btn-small,
+.btn-upload.btn-small {
+  padding: 0.5rem 1rem;
+  font-size: $font-size-12;
+  text-transform: uppercase;
+
+  i {
+    font-size: $font-size-16;
+  }
+
+  & .btn__loader span {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}
+
+button.btn-xsmall,
+.btn-upload.btn-xsmall {
+  padding: 0.35rem 0.7rem;
+  font-size: $font-size-10;
+
+  i {
+    font-size: $font-size-14;
+  }
+
+  & .btn__loader span {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+button.btn-primary-green,
+.btn-upload.btn-primary-green {
+  background-color: var(--color-green);
+  border: 1px solid var(--color-green);
+  color: var(--color-white);
+
+  &:hover {
+    background-color: var(--color-white);
+    color: var(--color-green);
+  }
+}
+
+button.btn-default-green,
+.btn-upload.btn-default-green {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-green);
+  color: var(--color-green);
+
+  &:hover {
+    background-color: var(--color-green);
+    color: var(--color-white);
+  }
+}
+
+button.btn-primary-midnight,
+.btn-upload.btn-primary-midnight {
+  background-color: var(--color-midnight);
+  border: 1px solid var(--color-midnight);
+  color: var(--color-white);
+
+  &:hover {
+    background-color: transparent;
+    color: var(--color-midnight);
+  }
+}
+
+button.btn-default-midnight,
+.btn-upload.btn-default-midnight {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-midnight);
+  color: var(--color-midnight);
+
+  &:hover {
+    color: var(--color-white);
+    background-color: var(--color-midnight);
+  }
+}
+
+button.btn-primary-midnight-light,
+.btn-upload.btn-primary-midnight-light {
+  background-color: var(--color-midnight-light);
+  border: 1px solid var(--color-midnight-light);
+  color: var(--color-white);
+
+  &:hover {
+    background-color: var(--color-white);
+    color: var(--color-midnight-light);
+  }
+}
+
+button.btn-default-midnight-light,
+.btn-upload.btn-default-midnight-light {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-midnight-light);
+  color: var(--color-midnight-light);
+
+  &:hover {
+    color: var(--color-white);
+    background-color: var(--color-midnight-light);
+  }
+}
+
+button.btn-primary-white,
+.btn-upload.btn-primary-white {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-white);
+  color: var(--color-midnight);
+
+  &:hover {
+    background-color: var(--color-midnight);
+    color: var(--color-white);
+  }
+}
+
+button.btn-default-white,
+.btn-upload.btn-default-white {
+  background-color: transparent;
+  border: 1px solid var(--color-white);
+  color: var(--color-white);
+
+  &:hover {
+    color: var(--color-midnight);
+    background-color: var(--color-white);
+  }
+}
+
+button.btn-primary-grey,
+.btn-upload.btn-primary-grey {
+  background-color: var(--color-grey-light);
+  border: 1px solid var(--color-grey);
+  color: var(--color-black-light);
+
+  &.active,
+  &:hover {
+    background-color: var(--color-black-light);
+    color: var(--color-grey);
+  }
+}
+
+.btn-link {
+  display: flex;
+  align-items: center;
+  gap: .357rem;
+  font-size: $font-size-14;
+  letter-spacing: 0.2pt;
+  font-weight: $font-weight-regular;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  overflow: hidden;
+
+  &.btn-link--reverse {
+    flex-direction: row-reverse;
+  }
+
+  &.btn-link-white {
+    color: var(--color-grey-light);
+  }
+
+  &.btn-link-black-light {
+    color: var(--color-black-light);
+  }
+
+  &.btn-link-midnight {
+    color: var(--color-midnight);
+  }
+
+  &.btn-link-midnight-light {
+    color: var(--color-midnight-light);
+  }
+
+  &.btn-link-grey {
+    color: var(--color-grey-dark);
+  }
+
+  span {
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &.btn-link--reverse-underline {
+    span {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  i {
+    font-size: $font-size-18;
+  }
+}

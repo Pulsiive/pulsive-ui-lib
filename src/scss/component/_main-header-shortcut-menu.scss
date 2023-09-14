@@ -1,0 +1,124 @@
+.main-header-shortcut-menu {
+  display: flex;
+  align-items: center;
+  height: 100%;
+
+  @media #{$screen-s}, #{$screen-m} {
+    display: none;
+  }
+
+  &--white {
+    .main-header-shortcut-menu__group {
+      &__content {
+        background-color: var(--color-grey-light) !important;
+
+        ul li.main-header-shortcut-menu__group__content__item {
+          color: var(--color-midnight) !important;
+
+          &:hover,
+          &--active {
+            color: var(--color-green) !important;
+          }
+        }
+      }
+
+      &:hover,
+      &--active {
+        .main-header-shortcut-menu__group__label {
+          background-color: var(--color-grey-light) !important;
+        }
+      }
+    }
+  }
+
+  & &__group {
+    position: relative;
+    height: 100%;
+    display: flex;
+
+    &__label {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      padding: 0 $spacing-md;
+      font-size: $font-size-14;
+      font-weight: $font-weight-bold;
+      text-transform: uppercase;
+      text-decoration: none;
+      text-align: center;
+      cursor: pointer;
+
+      @media #{$screen-s}, #{$screen-m} {
+        padding: 0 $spacing-sm;
+        font-size: $font-size-12;
+      }
+    }
+
+    &__content {
+      display: none;
+      position: absolute;
+      top: var(--main-header-height);
+      background-color: var(--color-midnight-dark);
+      min-width: 10rem;
+      z-index: 22;
+
+      ul li.main-header-shortcut-menu__group__content__item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        font-size: $font-size-14;
+        color: var(--color-grey);
+
+        &:hover,
+        &--active {
+          color: var(--color-green);
+
+          .main-header-shortcut-menu__group__content__item__link svg path {
+            fill: var(--color-green);
+          }
+        }
+
+        .main-header-shortcut-menu__group__content__item__link {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          padding: $spacing-md;
+          gap: $spacing-xs;
+          line-height: 1.5;
+          text-decoration: none;
+          cursor: pointer;
+
+          span {
+            display: flex;
+            white-space: nowrap;
+          }
+
+          i {
+            font-size: $font-size-20;
+          }
+
+          svg {
+            fill: currentColor;
+            margin: 0 0.75rem;
+            width: 1.5rem;
+            height: 1.5rem;
+          }
+        }
+      }
+    }
+
+    &:hover,
+    &.main-header-shortcut-menu__group--active {
+      .main-header-shortcut-menu__group__label {
+        background-color: var(--color-midnight-dark);
+        color: var(--color-green);
+      }
+    }
+
+    &:hover {
+      .main-header-shortcut-menu__group__content {
+        display: block;
+      }
+    }
+  }
+}

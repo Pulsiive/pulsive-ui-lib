@@ -1,0 +1,27 @@
+.status-label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+
+  & &__icon {
+    display: inline-flex;
+    align-items: center;
+
+    &__bullet {
+      display: block;
+      width: $font-size-18;
+      height: $font-size-18;
+      margin: 0 .125rem;
+      border-radius: 50%;
+    }
+
+    i {
+      font-size: $font-size-22 !important;
+    }
+  }
+
+  & &__text {
+    color: inherit;
+    white-space: nowrap;
+  }
+}

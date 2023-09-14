@@ -1,0 +1,130 @@
+:root {
+  --main-header-height: 5.3575rem;
+
+  @media #{$screen-s} {
+    --main-header-height: 5rem;
+  }
+}
+
+.main-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--main-header-height);
+  padding: 0 $spacing-lg;
+  background: var(--color-midnight);
+  color: var(--color-grey);
+  z-index: 20;
+
+  &--white {
+    background-color: var(--color-white) !important;
+    box-shadow: 1px 1px var(--color-grey);
+    color: var(--color-midnight) !important;
+  }
+
+  @media #{$screen-s} {
+    padding: 0 $spacing-sm;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    user-select: none;
+
+    &__slice {
+      display: flex;
+      align-items: center;
+      gap: $spacing-sm;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin: auto;
+    cursor: pointer;
+
+    &--active,
+    &:hover {
+      color: var(--color-green);
+    }
+
+    &--mobile {
+      @media #{$screen-xl} {
+        display: none !important;
+      }
+    }
+
+    &__icon,
+    .tooltip .main-header__item__icon {
+      display: inline-flex;
+      position: relative;
+
+      i {
+        font-size: $font-size-28!important;
+        cursor: pointer;
+      }
+
+      &--with-chip {
+        &:before {
+          content:"";
+          background-color: var(--color-red);
+          border-radius: $border-radius-md;
+          height: 0.75rem;
+          position: absolute;
+          left: 1.25rem;
+          top: 0;
+          width: 0.75rem;
+        }
+      }
+    }
+
+    &__label {
+      font-weight: $font-weight-bold;
+      margin-left: $spacing-xs;
+
+      @media #{$screen-s}, #{$screen-m} {
+        display: none;
+      }
+    }
+
+    @media #{$screen-l}, #{$screen-xl} {
+      & + .main-header__item__label {
+        display: none;
+      }
+    }
+  }
+
+  &__logo {
+    position: relative;
+    display: flex;
+    margin: auto;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    @media #{$screen-s} {
+      height: 3rem;
+    }
+
+    img, svg {
+      width: auto;
+      height: 3.5rem;
+    }
+
+    &--preprod {
+      position: absolute;
+      top: -0.3rem;
+      right: -2.5rem;
+      padding: calc($spacing-xs / 5) $spacing-xs;
+      border-radius: $border-radius-md;
+      background-color: var(--color-info-main);
+      color: var(--color-info-light);
+      font-size: $font-size-12;
+    }
+  }
+}

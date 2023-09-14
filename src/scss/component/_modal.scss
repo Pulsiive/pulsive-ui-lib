@@ -1,0 +1,204 @@
+$color-black: #292929;
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba($color-black, 0.7);
+    z-index: 40;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+
+    &.modal-active {
+        visibility: visible;
+
+        .modal-content {
+            width: 50rem;
+            height: auto;
+
+            &-fullscreen {
+                width: 100%;
+                height: 100%;
+            }
+
+            &-max-width {
+                width: 100%;
+            }
+
+            &-max-height {
+                height: 100%;
+            }
+
+            &-animated {
+                transition: all 0.4s ease-in-out;
+            }
+        }
+    }
+
+    .modal-content {
+        max-height: 90%;
+        width: 0;
+        height: 0;
+        margin: $spacing-md;
+        background: var(--color-white);
+        border-radius: $border-radius-xl;
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        &::-webkit-scrollbar {
+            width: 0.357rem;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            border: 0 solid transparent;
+            border-top-left-radius: calc($border-radius-xl / 4);
+            border-bottom-left-radius: calc($border-radius-xl / 4);
+            -webkit-box-shadow: inset 0 0 0 3px var(--color-midnight);
+            -moz-box-shadow: inset 0 0 0 3px var(--color-midnight);
+            box-shadow: inset 0 0 0 3px var(--color-midnight);
+        }
+
+        &::-webkit-scrollbar-track {
+            margin-top: $border-radius-xl;
+            margin-bottom: $border-radius-xl;
+        }
+
+        @media #{$screen-s}, #{$screen-m} {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .modal-body {
+            height: 100%;
+
+            .modal-body-wrapper {
+                position: relative;
+
+                .modal-close-btn {
+                    position: absolute;
+                    top: $spacing-md;
+                    right: $spacing-md;
+                    z-index: 41;
+                    cursor: pointer;
+
+                    i {
+                        font-size: $font-size-28;
+                        color: var(--color-midnight-light);
+                    }
+
+                    &:hover i {
+                        color: var(--color-green);
+                    }
+                }
+
+                .modal-block {
+                    text-align: center;
+                    padding: 4rem;
+                    overflow: auto;
+                    overflow-x: hidden;
+
+                    @media #{$screen-s}, #{$screen-m} {
+                        padding: $spacing-lg;
+                    }
+
+                    .modal-title {
+                        margin-bottom: $spacing-lg;
+                        font-size: $font-size-20;
+                        font-weight: $font-weight-regular;
+                        letter-spacing: 0.4pt;
+                        color: var(--color-midnight-light);
+                        text-transform: none;
+
+                        &-huge {
+                            font-size: $font-size-34;
+                            font-weight: $font-weight-light;
+                            line-height: 1.2;
+                        }
+
+                        &-align-left {
+                            text-align: left;
+                        }
+                    }
+
+                    .modal-title-stepper {
+                        margin-bottom: $spacing-md;
+
+                        & > span {
+                            position: relative;
+                            display: inline-flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 2rem;
+                            height: 2rem;
+                            font-size: $font-size-14;
+                            font-weight: 700;
+                            border-radius: 1rem;
+                            color: var(--color-white);
+                            background-color: var(--color-grey);
+                            transition: all 0.25s ease-out;
+
+                            & + * {
+                                margin-left: $spacing-md;
+
+                                &::before {
+                                    content: "";
+                                    position: absolute;
+                                    left: -$spacing-md;
+                                    display: block;
+                                    width: 1.5rem;
+                                    height: 1px;
+                                    background-color: var(--color-grey);
+                                }
+                            }
+
+                            &.active {
+                                background-color: var(--color-green);
+                            }
+                        }
+
+                        &--align-left {
+                            text-align: left;
+                        }
+                    }
+
+                    .modal-picture {
+                        display: block;
+                        height: 20rem;
+                        margin: $spacing-lg auto;
+
+                        svg {
+                            height: 100%;
+                        }
+                    }
+
+                    .modal-description {
+                        font-size: $font-size-16;
+                        color: var(--color-midnight);
+                        text-align: left;
+
+                        &--align-center {
+                            text-align: center;
+                        }
+                    }
+
+                    .modal-form-narrow {
+                        padding: 0 calc($spacing-md * 2);
+
+                        @media #{$screen-s} {
+                            padding: 0;
+                        }
+                    }
+
+                    .modal-search {
+                        width: 100%;
+                        margin: $spacing-sm 0;
+                    }
+                }
+            }
+        }
+    }
+}

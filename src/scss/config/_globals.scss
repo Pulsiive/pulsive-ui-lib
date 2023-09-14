@@ -1,0 +1,60 @@
+:root {
+    font-size: 14px;
+
+    @media #{$screen-s} {
+        font-size: 12px;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: $font-family;
+}
+
+body {
+    background-color: var(--color-white);
+}
+
+a {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: underline;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+p {
+    line-height: 1.5;
+    font-size: $font-size-14;
+    font-weight: $font-weight-regular;
+    color: var(--color-midnight-light);
+    word-break: break-word;
+}
+
+ul {
+    list-style: none;
+}
+
+button,
+select,
+input {
+    outline: 0;
+}
+
+svg {
+    fill: currentColor;
+}
+
+.wrapper {
+    display: block;
+    position: relative;
+}
+
+hr {
+    border: 1px solid var(--color-grey-light);
+}

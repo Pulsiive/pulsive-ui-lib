@@ -1,0 +1,76 @@
+{
+  "actions": {
+    "activate": "Activate",
+    "add": "Add",
+    "back": "Back",
+    "cancel": "Cancel",
+    "clear": "Clear",
+    "clear_search": "Clear search",
+    "close": "Close",
+    "confirm": "Confirm",
+    "copied": "Copied",
+    "copy": "Copy",
+    "deactivate": "Deactivate",
+    "delete": "Delete",
+    "download": "Download {{value}}",
+    "download_all": "Download all",
+    "duplicate": "Duplicate",
+    "edit": "Edit",
+    "export": "Export",
+    "hide_filters": "Hide filters",
+    "import": "Import",
+    "more": "More",
+    "new": "New",
+    "ok": "OK",
+    "open": "Open",
+    "quit": "Quit",
+    "quit_without_saving": "Quit without saving",
+    "remove": "Remove",
+    "remove_all": "Remove all",
+    "reset_filters": "Reset filters",
+    "save": "Save",
+    "save_and_quit": "Save and quit",
+    "search": "Search",
+    "send": "Send",
+    "show_filters": "Show filters",
+    "sort_by": "Sort by {{label}}",
+    "validate": "Validate"
+  },
+  "footer": {
+    "cookies_settings": "Cookies settings",
+    "legal_notice": "Legal notice"
+  },
+  "header": {
+    "home": "Home",
+    "menu": "Menu",
+    "preprod": "preprod"
+  },
+  "messages": {
+    "id_matched": "{{count}} ID matched successfully",
+    "id_matched_plural": "{{count}} IDs matched successfully",
+    "id_already_selected": "This ID was already selected: {{ids}}",
+    "id_already_selected_plural": "These IDs were already selected: {{ids}}",
+    "id_unmatched": "Unable to match this ID: {{ids}}",
+    "id_unmatched_plural": "Unable to match these IDs: {{ids}}",
+    "inputs_required": "Inputs marked with * are required.",
+    "loading_results": "Loading results...",
+    "no_result": "No result found",
+    "no_result_for_query": "No result found for '{{query}}'",
+    "save_before_leaving": "There are still unsaved modifications.<br/>Do you want to save them before leaving?",
+    "warning_unsaved_changes": "There are still unsaved modifications.<br/>Leave anyway ?"
+  },
+  "placeholders": {
+    "search_ids": "Enter a list of IDs (ex: 4345,4304,9721,9844)...",
+    "select_default": "Select...",
+    "upload_panel": "Click here to select your file"
+  },
+  "select_option": {
+    "create": "Create \"{{value}}\""
+  },
+  "pagination": {
+    "first": "First page",
+    "last": "Last page",
+    "next": "Next page",
+    "previous": "Previous page"
+  }
+}

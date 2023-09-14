@@ -1,0 +1,43 @@
+.search-bar-clearable {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  position: relative;
+
+  input[type="text"] {
+    padding-right: 4.5rem;
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0.75rem;
+    height: 100%;
+    color: var(--color-midnight-light);
+    gap: var(--spacing-xs);
+
+    & &__action {
+      &:hover {
+        color: var(--color-green);
+      }
+
+      &__icon {
+        font-size: $font-size-18;
+      }
+    }
+
+    & &__separator {
+      align-self: stretch;
+      width: 1px;
+      background-color: var(--color-grey);
+      margin-bottom: 0.5rem;
+      margin-top: 0.5rem;
+      box-sizing: border-box;
+      display: block;
+    }
+  }
+}
