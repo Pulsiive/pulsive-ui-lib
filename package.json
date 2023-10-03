@@ -1,5 +1,5 @@
 {
-  "name": "@sirdata/ui-lib",
+  "name": "@pulsive/ui-lib",
   "version": "1.6.2",
   "description": "Shared ui library for our frontends",
   "private": true,
