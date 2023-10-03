@@ -67,7 +67,6 @@ export {default as InputEmail} from "./input/InputEmail";
 export {default as InputNumber} from "./input/InputNumber";
 export {default as InputNumberNew} from "./input/InputNumberNew";
 export {default as InputPassword} from "./input/InputPassword";
-export {default as InputPhone, InputPhoneLocale} from "./input/InputPhone";
 export {default as InputRadio} from "./input/InputRadio";
 export {default as InputRange} from "./input/InputRange";
 export {default as InputText} from "./input/InputText";
