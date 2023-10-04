@@ -1,76 +1,79 @@
-# UI Library 🚀
+This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
-Next steps:
----
-- [x] Initialiser le projet
-- [x] Installer Storybook
-- [x] Installer Rollup
-- [x] Publier la lib (github repo via ssh)
-- [x] Automatiser la publication d'une nouvelle release (tag)
-- [ ] (MUST HAVE)Lib: Pouvoir importer plus facilement les assets cf. `import { Button } from "@pulsive/ui-lib/components"`
+# Getting Started
 
-## Available Scripts
+>**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
 
-In the project directory, you can run:
+## Step 1: Start the Metro Server
 
-### `yarn storybook`
+First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
 
-Runs the storybook in the development mode.\
-Open [http://localhost:6006](http://localhost:6006) to view it in the browser.
-
-The page will reload if you make edits.
-
-### `yarn build-storybook`
-
-Storybook will create a static web application capable of being served by any web server.
-
-### `yarn build`
-
-This command will build the library in a `/dist` folder using [Rollup](https://rollupjs.org/guide/en/).
-
-### `yarn build:local`
-
-This command will run `yarn build` and `npm pack` that will pack the project `pulsive-ui-lib-[version].tgz` to the root directory.
-You will be able to install the lib in your frontend projects with this following command:
-```bash
-# with npm
-npm i path/to/lib/pulsive-ui-lib-[version].tgz
-
-# with yarn
-yarn add path/to/lib/pulsive-ui-lib-[version].tgz
-```
-
-## Create a new release
-
-### Requirement
-Before create a new release, be sure that your pull request has been approved and merged into `main` branch.
-
-### `yarn release:[type]`
-If you want to do a **patch** release you can simply run
+To start Metro, run the following command from the _root_ of your React Native project:
 
 ```bash
-yarn release:patch
+# using npm
+npm start
+
+# OR using Yarn
+yarn start
 ```
 
-The existing version will be incremented by 1 in the specified field and automatically: 
-- Update the *package.json* version and commit that change
-- Create the tag
-- Push new commit and tags to the `main` branch
+## Step 2: Start your Application
 
-### Available type:
-- `prepatch` (v1.0.0 => v1.0.**1-0**)
-- `patch` (v1.0.0 => v1.0.**1**)
-- `minor` (v1.0.0 => v1.**1**.0)
-- `major` (v1.0.0 => v**2**.0.0)
+Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
 
-If you want to create a custom release, you can also run that command by specifying a `RELEASE_TYPE` environment variable
+### For Android
+
 ```bash
-RELEASE_TYPE=[version] npm run release
+# using npm
+npm run android
+
+# OR using Yarn
+yarn android
 ```
 
----
+### For iOS
 
-This project use:
-- [React](https://fr.reactjs.org/)
-- [Rollup](https://rollupjs.org/guide/en/)
-- [Storybook](https://storybook.js.org/docs/react/get-started/introduction)
+```bash
+# using npm
+npm run ios
+
+# OR using Yarn
+yarn ios
+```
+
+If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+
+This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+
+## Step 3: Modifying your App
+
+Now that you have successfully run the app, let's modify it.
+
+1. Open `App.tsx` in your text editor of choice and edit some lines.
+2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+
+   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+
+## Congratulations! :tada:
+
+You've successfully run and modified your React Native App. :partying_face:
+
+### Now what?
+
+- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
+- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+
+# Troubleshooting
+
+If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+
+# Learn More
+
+To learn more about React Native, take a look at the following resources:
+
+- [React Native Website](https://reactnative.dev) - learn more about React Native.
+- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
+- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
+- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
+- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
