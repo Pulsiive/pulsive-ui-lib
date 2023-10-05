@@ -16,3 +16,10 @@ export const Basic: Story = {
     label: 'Button',
   },
 };
+
+export const Second: Story = {
+  args: {
+    label: 'Se connecter avec Google',
+    second: true,
+  },
+};

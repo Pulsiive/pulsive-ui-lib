@@ -5,6 +5,7 @@ export type ButtonProps = {
   onPress: () => void;
   label: string;
   color?: string;
+  second?: boolean;
 };
 
 const styles = StyleSheet.create({
@@ -15,28 +16,51 @@ const styles = StyleSheet.create({
     flexGrow: 0,
     backgroundColor: '#81cd2c',
   },
+  secondButton: {
+    paddingVertical: 12,
+    paddingHorizontal: 124,
+    borderRadius: 9,
+    flexGrow: 0,
+    borderStyle: 'solid',
+    borderColor: 'white',
+    borderWidth: 1,
+    backgroundColor: '#ffffff1a',
+  },
   buttonText: {
     color: 'white',
     fontSize: 10,
     fontWeight: '500',
+  },
+  secondContainer: {
+    alignItems: 'center',
   },
   buttonContainer: {
     alignItems: 'center',
   },
 });
 
-const DefaultButton = ({label, onPress, color}: ButtonProps) => {
-  return (
-    <>
-      <View style={styles.buttonContainer}>
+const DefaultButton = ({label, onPress, color, second}: ButtonProps) => {
+  if (second) {
+    return (
+      <View style={styles.secondContainer}>
         <TouchableOpacity
-          style={[styles.button, !!color && {backgroundColor: color}]}
+          style={styles.secondButton}
           onPress={onPress}
           activeOpacity={0.8}>
           <Text style={styles.buttonText}>{label}</Text>
         </TouchableOpacity>
       </View>
-    </>
+    );
+  }
+  return (
+    <View style={styles.buttonContainer}>
+      <TouchableOpacity
+        style={[styles.button, !!color && {backgroundColor: color}]}
+        onPress={onPress}
+        activeOpacity={0.8}>
+        <Text style={styles.buttonText}>{label}</Text>
+      </TouchableOpacity>
+    </View>
   );
 };
 

@@ -16,3 +16,4 @@ export const Basic: Story = {
     label: 'Box',
   },
 };
+
