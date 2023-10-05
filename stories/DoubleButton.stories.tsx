@@ -1,7 +1,7 @@
 import type {Meta, StoryObj} from '@storybook/react';
 
 import DoubleButton from './DoubleButton';
-import Button from './Button';
+import DefaultButton from "./DefaultButton";
 
 const meta: Meta<typeof DoubleButton> = {
   title: 'Component/DoubleButton',
@@ -16,8 +16,8 @@ export const Basic: Story = {
   args: {
     children: (
       <>
-        <Button onPress={() => {}} label={'Inscription'}></Button>
-        <Button onPress={() => {}} label={'Connexion'}></Button>
+        <DefaultButton onPress={() => {}} label={'Inscription'}></DefaultButton>
+        <DefaultButton onPress={() => {}} label={'Connexion'}></DefaultButton>
       </>
     ),
   },

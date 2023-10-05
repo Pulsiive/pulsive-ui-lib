@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const Button = ({label, onPress, color}: ButtonProps) => {
+const DefaultButton = ({label, onPress, color}: ButtonProps) => {
   return (
     <>
       <View style={styles.buttonContainer}>
@@ -40,4 +40,4 @@ const Button = ({label, onPress, color}: ButtonProps) => {
   );
 };
 
-export default Button;
+export default DefaultButton;
