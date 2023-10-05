@@ -13,8 +13,6 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   DoubleButtonContainer: {
-    flex: 1,
-    display: 'flex',
     alignItems: 'center',
   },
 });

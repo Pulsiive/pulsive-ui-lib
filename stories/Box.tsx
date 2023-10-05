@@ -15,7 +15,6 @@ const styles = StyleSheet.create({
     fontWeight: '500',
   },
   Box: {
-    alignSelf: 'center',
     justifyContent: 'center',
     width: 100,
     height: 60,
@@ -27,8 +26,7 @@ const styles = StyleSheet.create({
     elevation: 10,
   },
   BoxContainer: {
-    flex: 1,
-    display: 'flex',
+    alignItems: 'center',
   },
 });
 
