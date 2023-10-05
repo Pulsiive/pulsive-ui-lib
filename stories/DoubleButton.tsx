@@ -9,20 +9,12 @@ const styles = StyleSheet.create({
   DoubleButton: {
     display: 'flex',
     flexDirection: 'row',
-    width: '27%',
     justifyContent: 'space-between',
-  },
-  DoubleButtonContainer: {
-    alignItems: 'center',
   },
 });
 
 const DoubleButton = ({children}: DoubleButtonProps) => {
-  return (
-    <View style={styles.DoubleButtonContainer}>
-      <View style={styles.DoubleButton}>{children}</View>
-    </View>
-  );
+  return <View style={styles.DoubleButton}>{children}</View>;
 };
 
 export default DoubleButton;

@@ -10,17 +10,16 @@ export type ButtonProps = {
 
 const styles = StyleSheet.create({
   button: {
-    paddingVertical: 12,
-    paddingHorizontal: 28,
+    paddingVertical: 15,
+    paddingHorizontal: 55,
     borderRadius: 9,
     flexGrow: 0,
     backgroundColor: '#81cd2c',
   },
   secondButton: {
     paddingVertical: 12,
-    paddingHorizontal: 124,
+    paddingHorizontal: 111,
     borderRadius: 9,
-    flexGrow: 0,
     borderStyle: 'solid',
     borderColor: 'white',
     borderWidth: 1,
